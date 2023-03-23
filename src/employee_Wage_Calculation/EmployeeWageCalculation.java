@@ -4,19 +4,22 @@ import java.util.Scanner;
 
 public class EmployeeWageCalculation {
 	static int wagePerHour = 20;
-	static int workingDaysPerMonth = 20;
-	static int workingHoursFullTimerPerDay = 8;
-	static int workingHoursForPartTimerPerDay = 4;
 	
-	static int wage = (int)(wagePerHour * workingHoursFullTimerPerDay * workingDaysPerMonth );
-	static int wage2 = (int)(wagePerHour * workingHoursForPartTimerPerDay * workingDaysPerMonth );
-
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println(
 				"Enter 1 if the employee is present & fulltimer; enter 2 if the employee is present & parttimer; enter 0 if the employee is absent. ");
 		int presenty = sc.nextInt();
+		
+		System.out.println("Enter the value of working days of a month:");
+		int workingDaysForAMonth = sc.nextInt();
+		System.out.println("Enter the value of working hours of a month:");
+		int workingHoursForAMonth = sc.nextInt();
+		
+		int wage = (int)(wagePerHour * workingDaysForAMonth * workingHoursForAMonth );
+		int wage2 = (int)(wagePerHour * workingDaysForAMonth * workingHoursForAMonth );
 
 		switch (presenty) {
 		case 1:
